@@ -6,6 +6,7 @@ import Request from '@/components/Request';
 import axios from 'axios';
 import RequestCreator from '@/components/RequestCreator';
 
+axios.defaults.withCredentials = true; 
 function page() {
   // @ts-ignore
   const [apidata1, setApidata1] = useState<any>({});
@@ -13,7 +14,7 @@ function page() {
   useEffect(()=> {
     axios.get(`${process.env.NEXT_PUBLIC_BACKEND_URL}/creator/profile`, {  
       headers: { 
-        "authorization" : localStorage.getItem("jwtToken") 
+        "authorization" : localStorage.getItem("jwtToken")
       }
     })
     .then(res => {
