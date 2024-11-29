@@ -99,10 +99,12 @@ return (
         <Label htmlFor="youtubeUrl">Social-Media URL</Label>
         <Input name="youtubeUrl" onChange={handleInput} value={data.youtubeUrl} id="youtubeUrl" placeholder="example-yt.com" type="url" />
         </LabelInputContainer>
+
         <LabelInputContainer className="mb-4">
         <Label htmlFor="phoneNo">Phone No.</Label>
         <Input name="phoneNo" onChange={handleInput} value={data.phoneNo} id="phoneNo" placeholder="+91" type="text" />
         </LabelInputContainer>
+        
         <LabelInputContainer className="mb-4">
         <Label htmlFor="category">Category*</Label>
         <select 
