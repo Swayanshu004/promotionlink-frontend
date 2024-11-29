@@ -45,7 +45,7 @@ function Footer() {
     <div className='w-screen '>
         <div className='w-full h-10 bg-violet-700 rounded-t-full'></div>
         <div className='w-full h-24 bg-violet-700 flex items-center justify-between'>
-          <div className='w-4/6 flex items-center lg:pl-20  h-20 text-xl font-light '>
+          <div className='w-5/6 flex items-center lg:pl-20  h-20 text-md font-light '>
             <h3 className='px-2 lg:px-5 py-3 border-2 rounded-3xl hover:bg-violet-600'>
               <span className='font-bold text-violet-950'>@ : </span>swayanshusahoo.pri@gmail.com
             </h3>
