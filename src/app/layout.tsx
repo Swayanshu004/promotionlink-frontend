@@ -5,8 +5,6 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
-const inter = Inter({ subsets: ["latin"] });
-
 export const metadata: Metadata = {
   title: "PROMOTION-LINK",
   description: "A platform that makes it easy for brands and content creators to work together on product promotions.",
@@ -19,12 +17,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark">
-      <body className={inter.className}>
+      <body>
         <div className="w-screen top-0 z-10 fixed">
           <Navbar/>
         </div>
         {children}
-        <div className="w-screen relative flex items-center justify-center dark:bg-black">
+        <div className="w-screen">
           <Footer/>
         </div>
       </body>
