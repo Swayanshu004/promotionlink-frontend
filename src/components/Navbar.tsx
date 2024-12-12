@@ -13,12 +13,12 @@ function Navbar() {
   }, [])
   
   return (
-    <div className='w-screen fixed z-20 px-3 md:px-10 py-5 top-0 flex items-center justify-between bg-gradient-to-b from-neutral-900 to-transparent'>
+    <div className='my-4 mx-10 px-3 md:px-10 py-5 flex items-center justify-between bg-neutral-200 bg-opacity-70'>
         <Link href={"/"}>
-        <h1 className="text-xl md:text-4xl font-bold text-violet-700">PROMOTION-LINK</h1>
+        <h1 className="text-xl md:text-2xl font-normal text-violet-800 tracking-wide">PROMOTIONLINK</h1>
         </Link>
         <Link href={`/`}>        
-            <button className='bg-neutral-300 px-3 py-1 md:px-5 md:py-2 font-bold dark:text-black rounded-3xl md:w-[130px] hover:bg-violet-700 hover:text-white'>
+            <button className='bg-neutral-300 px-3 py-1 md:px-5 md:py-2 text-black rounded-3xl md:w-[130px] hover:bg-violet-700 hover:text-white'>
                 PROFILE
             </button>
         </Link>

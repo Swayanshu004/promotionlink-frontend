@@ -5,6 +5,9 @@
 body::-webkit-scrollbar {
   display: none;
 }
+body{
+  background-color: white;
+}
 
 @layer base {
   :root {

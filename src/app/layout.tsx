@@ -20,7 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark">
       <body className={inter.className}>
-        <div className="w-screen relative flex items-center justify-center dark:bg-black">
+        <div className="w-screen top-0 z-10 fixed">
           <Navbar/>
         </div>
         {children}
