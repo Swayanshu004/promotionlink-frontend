@@ -57,8 +57,8 @@ function Hero() {
             <p  className='text-neutral-500'>We connect brands and influencers based on</p>
             <h2 className='font-bold text-4xl md:text-6xl mb-5 ml-5 md:ml-0 text-white'>niche,<br/>audience,<br/>and<br/>engagement.</h2>
             <p  className='my-10 md:w-3/6 text-neutral-500'>Influencers find opportunities that match their niche, while brands discover the right voices to amplify their message.</p>
-            <div className='w-4/6 mx-auto flex flex-col md:flex-row gap-5 justify-around my-10'>
-                <div className='text-black bg-cyan-50 hover:bg-cyan-100 border-2 border-neutral-900 px-10 py-5 flex flex-col items-center justify-between rounded-lg'>
+            <div className='w-full mx-auto flex flex-col md:flex-row gap-5 justify-around my-10'>
+                <div className='text-black bg-cyan-50 hover:bg-cyan-100 border-2 border-neutral-900 px-10 py-5 flex flex-col items-center justify-between cursor-pointer'>
                     <h2 className='text-3xl font-bold my-2 '>Free</h2>
                     <p className='mt-2 mb-5'>for first 3 promotion</p>
                     <div className='w-full font-medium text-lg text-red-600 border-t-2 border-neutral-500 py-15'>
@@ -67,7 +67,7 @@ function Hero() {
                         <p>no profile customization</p> 
                     </div>
                 </div>
-                <div className='text-black bg-green-100 hover:bg-green-200 border-2 border-neutral-900 px-10 py-5 flex flex-col items-center justify-between rounded-lg'>
+                <div className='text-black bg-green-100 hover:bg-green-200 border-2 border-neutral-900 px-10 py-5 flex flex-col items-center justify-between cursor-pointer'>
                     <h2 className='text-3xl font-bold '>5$ / month</h2>
                     <p className='mt-2 mb-5'>Premium</p>
                     <div className='w-full font-medium text-lg text-green-600 border-t-2 border-neutral-500 py-15'>
@@ -76,7 +76,7 @@ function Hero() {
                         <p>cusmotized profile</p> 
                     </div>
                 </div>
-                <div className='text-black bg-amber-400 hover:bg-amber-500 border-2 border-neutral-900 px-10 py-5 flex flex-col items-center justify-between rounded-lg'>
+                <div className='text-black bg-amber-400 hover:bg-amber-500 border-2 border-neutral-900 px-10 py-5 flex flex-col items-center justify-between cursor-pointer'>
                     <h2 className='text-3xl font-bold my-2 '>15$ / month</h2>
                     <p className='mt-2 mb-5'>Luxury</p>
                     <div className='w-full font-medium text-lg text-green-600 border-t-2 border-neutral-500 py-15'>
