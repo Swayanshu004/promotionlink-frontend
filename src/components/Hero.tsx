@@ -85,7 +85,7 @@ function Hero() {
             </div>
             <h3 className='text-lg'>We’re here to connect <span className='font-bold'>SHGs</span> with <span className='font-bold'>influencers</span> who align with their <span className='font-bold'>values, ensuring mutual growth and sustainable success.</span></h3>
         </div>
-        <div className='w-screen min-h-screen p-10 bg-neutral-900'>
+        <div className='w-screen h-fit p-10 bg-neutral-900'>
             <div className='flex items-end justify-center'>
             <h2 className='w-full text-violet-50 text-xl md:text-4xl mb-10 px-10'>The influencer marketing sector in India is projected to reach <span className='font-bold text-violet-400'>₹3,375 crore</span> by 2026, with a compound annual growth rate (CAGR) of<span className='font-bold text-violet-400'> 18%.</span> 
             <br/><Link className='text-sm bg-neutral-950 px-5 py-2 rounded-full hover:bg-neutral-600 text-white' href={"https://www.ey.com/en_in/insights/media-entertainment/how-influencer-marketing-is-impacting-brands-in-india"}>Read</Link>
