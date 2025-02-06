@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import Link from "next/link";
+import { useRouter } from 'next/navigation';
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import { cn } from "@/lib/utils";
@@ -12,7 +12,7 @@ import { useWallet } from "@solana/wallet-adapter-react";
 
 function page() {
   const { publicKey, signMessage } = useWallet();
-
+  const router = useRouter();
   const [data, setData] = useState({
     name: "",
     instagramUrl: "",
@@ -61,6 +61,7 @@ function page() {
           })
           const data = await response.json();
           localStorage.setItem('jwtToken',data.token);
+          router.push("/Creator/profile");
         }
       } catch (error) {
         console.error("Some Error In Fetch",error);
@@ -85,11 +86,11 @@ return (
             <Label htmlFor="name">Name*</Label>
             <Input name="name" onChange={handleInput} value={data.name} id="name" placeholder="name" type="text" />
         </LabelInputContainer>
-        <div className="w-4/5">
+        {/* <div className="w-4/5">
           {
             publicKey ? <WalletDisconnectButton /> : <WalletMultiButton />
           }
-        </div>
+        </div> */}
         </div>
         <LabelInputContainer className="mb-4">
         <Label htmlFor="instagramUrl">Social-Media URL*</Label>
@@ -134,16 +135,14 @@ return (
         <LabelInputContainer className="mb-4">
         <Label htmlFor="password">Password*</Label>
         <Input name="password" onChange={handleInput} value={data.password} id="password" placeholder="••• •••" type="password" />
-        </LabelInputContainer>
-        <Link href="/Creator/profile">        
-          <button
-          className="bg-gradient-to-br relative group/btn from-black dark:from-zinc-900 dark:to-zinc-900 to-neutral-600 block dark:bg-zinc-800 w-full text-white rounded-md h-10 font-medium shadow-[0px_1px_0px_0px_#ffffff40_inset,0px_-1px_0px_0px_#ffffff40_inset] dark:shadow-[0px_1px_0px_0px_var(--zinc-800)_inset,0px_-1px_0px_0px_var(--zinc-800)_inset]"
-          type="submit"
-          >
-          Register &rarr;
-          <BottomGradient />
-          </button>
-        </Link>
+        </LabelInputContainer>       
+        <button
+        className="bg-gradient-to-br relative group/btn from-black dark:from-zinc-900 dark:to-zinc-900 to-neutral-600 block dark:bg-zinc-800 w-full text-white rounded-md h-10 font-medium shadow-[0px_1px_0px_0px_#ffffff40_inset,0px_-1px_0px_0px_#ffffff40_inset] dark:shadow-[0px_1px_0px_0px_var(--zinc-800)_inset,0px_-1px_0px_0px_var(--zinc-800)_inset]"
+        type="submit"
+        >
+        Register
+        <BottomGradient />
+        </button>
     </form>
     </div>
 </div>

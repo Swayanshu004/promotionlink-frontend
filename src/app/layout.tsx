@@ -18,7 +18,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark">
       <body>
-        <div className="w-screen top-0 z-10 fixed">
+        <div className="w-screen top-0 z-20 fixed">
           <Navbar/>
         </div>
         {children}

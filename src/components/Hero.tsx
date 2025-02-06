@@ -1,4 +1,5 @@
 import React from 'react'
+import Image from 'next/image'
 import Link from 'next/link'
 import WordRotate from './magicui/word-rotate'
 import Particles from './magicui/particles'
@@ -8,87 +9,104 @@ function Hero() {
     <div>
         <div className='w-screen h-screen flex flex-col items-center justify-center relative'>
             <Particles
-            className="absolute z-10 w-screen h-screen"
+            className="absolute z-10 w-screen h-screen opacity-40"
             quantity={500}
             ease={80}
             color={"#000"}
             />
             <div className='flex flex-col items-center justify-center absolute z-20'>
-                <h2 className='text-violet-600 text-xl md:text-7xl'>The Ultimate Platform for </h2>
+                <h2 className='text-violet-600 text-4xl md:text-7xl'>Empowering</h2>
                 <WordRotate
-                className="mt-2 text-4xl md:text-6xl font-bold text-violet-500"
-                words={["Influencers", "Brands"]}
+                className="my-4 text-4xl md:text-6xl font-bold text-violet-700"
+                words={["Creators", "Self-Help Groups"]}
                 />
-                <div className='flex flex-col md:flex-row gap-5 md:gap-7 my-5'>
+                <h2 className='text-violet-600 text-4xl md:text-7xl mb-12 md:mb-0'>to Grow Together</h2>
+                <div className='flex flex-col md:flex-row gap-5 md:gap-7 mt-10 mb-5'>
                     <a href={"/Creator/register"}>        
-                        <button className="hover:bg-violet-950 bg-black shadow-2xl cursor-pointer px-7 py-4 rounded-full">
+                        <button className="hover:bg-violet-600 bg-black shadow-2xl cursor-pointer px-7 py-4 rounded-full transition delay-75 duration-500 ease-in-out">
                             <span className="whitespace-pre-wrap text-center text-md leading-none tracking-tight text-white dark:from-white dark:to-slate-900/10 lg:text-lg">
                             Register as Creator
                             </span>
                         </button>
                     </a>
                     <a href={"/Brand/register"}>        
-                        <button className="hover:bg-violet-950 bg-black shadow-2xl cursor-pointer px-7 py-4 rounded-full">
+                        <button className="hover:bg-violet-600 bg-black shadow-2xl cursor-pointer px-7 py-4 rounded-full transition delay-75 duration-500 ease-in-out">
                             <span className="whitespace-pre-wrap text-center text-md leading-none tracking-tight text-white dark:from-white dark:to-slate-900/10 lg:text-lg">
                             Register as Brand
                             </span>
                         </button>
                     </a>
                 </div>
-            <p className='text-center text-lg mt-5 md:w-screen text-neutral-900 px-10'>PromotionLink bridges the gap between <span className='text-violet-500 font-bold'>influencers</span> and <span className='text-violet-500 font-bold'>brands</span>. Helping to find their perfect match.</p>
+            <p className='text-center text-lg mt-5 md:w-screen text-neutral-900 px-10'>PromotionLink bridges the gap between <span className='text-violet-500 font-bold'>influencers</span> and <span className='text-violet-500 font-bold'>regional Self-Help Groups / startups</span>. Helping to find their perfect match.</p>
             </div>
         </div>
-        <div className='w-screen min-h-screen p-10 bg-gradient-to-t from-neutral-900'>
+        <div className='w-screen h-fit bg-violet-50 p-10 py-20'>
+            <h1 className='text-3xl font-bold'>We Focus On Empowering Small-Cap SHGs</h1>
+            <div className='flex flex-wrap md:flex-row gap-5 md:gap-0 items-center justify-around my-10 md:my-5'>
+                <Image 
+                src="https://res.cloudinary.com/swayanshu/image/upload/v1738865842/codingaashram/nq6jh3ncfzacy24z5ij6.jpg"
+                width={500}
+                height={500}
+                alt="mission-sakti-logo"
+                className='w-20 h-20 md:w-40 md:h-40 bg-white rounded-xl md:rounded-3xl grayscale hover:grayscale-0'
+                />
+                <Image 
+                src="https://res.cloudinary.com/swayanshu/image/upload/v1738865843/codingaashram/hdecwojh15a9n43pwltl.jpg"
+                width={500}
+                height={500}
+                alt="mission-sakti-logo"
+                className='w-20 h-20 md:w-40 md:h-40 bg-white rounded-xl md:rounded-3xl grayscale hover:grayscale-0'
+                />
+                <Image 
+                src="https://res.cloudinary.com/swayanshu/image/upload/v1738865844/codingaashram/ox8inzfpxi2ngb7xxbzh.jpg"
+                width={500}
+                height={500}
+                alt="mission-sakti-logo"
+                className='w-20 h-20 md:w-40 md:h-40 bg-white rounded-xl md:rounded-3xl grayscale hover:grayscale-0'
+                />
+                <Image 
+                src="https://res.cloudinary.com/swayanshu/image/upload/v1738865845/codingaashram/wtx3lbk1ugi5a54c3frx.png"
+                width={500}
+                height={500}
+                alt="kudumbashree-logo"
+                className='w-20 h-20 md:w-40 md:h-40 bg-white rounded-xl md:rounded-3xl grayscale hover:grayscale-0'
+                />
+                <Image 
+                src="https://res.cloudinary.com/swayanshu/image/upload/v1738865843/codingaashram/zmlhub0690hbiwj1z9nz.png"
+                width={500}
+                height={500}
+                alt="kudumbashree-logo"
+                className='w-20 h-20 md:w-40 md:h-40 bg-white rounded-xl md:rounded-3xl grayscale hover:grayscale-0'
+                />
+                <div 
+                className='w-20 h-20 md:w-40 md:h-40 border-black hover:border-violet-600 border-2 border-dashed rounded-xl md:rounded-3xl flex items-center justify-center text-balck hover:text-violet-600'>
+                    <h3 className='text-sm md:text-xl font-medium'>and more.</h3>
+                </div>
+            </div>
+            <h3 className='text-lg'>We’re here to connect <span className='font-bold'>SHGs</span> with <span className='font-bold'>influencers</span> who align with their <span className='font-bold'>values, ensuring mutual growth and sustainable success.</span></h3>
+        </div>
+        <div className='w-screen min-h-screen p-10 bg-neutral-900'>
             <div className='flex items-end justify-center'>
-            <h2 className='w-full text-violet-700 text-3xl md:text-5xl mb-10 px-10'>Influencer marketing is projected to grow to a <span className='font-bold text-violet-950'>$30 billion</span> industry by the end of 2024. 
-            <Link className='text-sm bg-neutral-950 px-5 py-2 rounded-full hover:bg-neutral-600 text-white' href={"https://www.business2community.com/statistics-pages/influencer-marketing-statistics"}>view</Link>
+            <h2 className='w-full text-violet-50 text-xl md:text-4xl mb-10 px-10'>The influencer marketing sector in India is projected to reach <span className='font-bold text-violet-400'>₹3,375 crore</span> by 2026, with a compound annual growth rate (CAGR) of<span className='font-bold text-violet-400'> 18%.</span> 
+            <br/><Link className='text-sm bg-neutral-950 px-5 py-2 rounded-full hover:bg-neutral-600 text-white' href={"https://www.ey.com/en_in/insights/media-entertainment/how-influencer-marketing-is-impacting-brands-in-india"}>Read</Link>
             </h2> 
             </div>
             <hr/>
-            <h2 className='w-full text-violet-200 text-3xl md:text-5xl my-10 px-10'><span className='font-bold text-violet-950'>34%</span> of brands say they have difficulty finding influencers.
-            <Link className='text-sm bg-neutral-950 px-5 py-2 rounded-full hover:bg-neutral-600 text-white' href={"https://www.meltwater.com/en/blog/influencer-marketing-statistics"}>view</Link>
+            <h2 className='w-full text-violet-50 text-xl md:text-4xl my-10 px-10'>According to a study by Edelman, <span className='font-bold text-violet-400'>63% </span> of consumers trust influencers more than brands when it comes to product recommendations.
+            <br/><Link className='text-sm bg-neutral-950 px-5 py-2 rounded-full hover:bg-neutral-600 text-white' href={"https://www.regionalinfluencers.in/news-article/regional-influencers-outperform-global-influencers-in-driving-engagement-and-sales-says-new-study"}>Read</Link>
             </h2>
             <hr/>
-            <h2 className='w-full text-violet-300 text-3xl md:text-5xl my-10 px-10'>Only <span className='font-bold text-violet-950'>30%</span> of influencers feel they are compensated fairly for their work.
-            <Link className='text-sm bg-neutral-950 px-5 py-2 rounded-full hover:bg-neutral-600 text-white' href={"https://www.businessofapps.com/insights/2021-influencer-compensation-report/"}>view</Link>
+            <h2 className='w-full text-violet-50 text-xl md:text-4xl my-10 px-10'>The 2025 Union Budget introduces the 'Grameen Credit Score,' enhancing credit access for <span className='font-bold text-violet-400'>100 million</span> rural SHG members.
+            <br/><Link className='text-sm bg-neutral-950 px-5 py-2 rounded-full hover:bg-neutral-600 text-white' href={"https://www.business-standard.com/budget/news/budget-2025-credit-score-boost-for-100-million-rural-shg-members-125020200506_1.html"}>Read</Link>
             </h2>
         </div>
         <div className='w-screen h-fit bg-neutral-900 p-10 flex flex-col'>
-            <p  className='text-neutral-500'>We connect brands and influencers based on</p>
-            <h2 className='font-bold text-4xl md:text-6xl mb-5 ml-5 md:ml-0 text-white'>niche,<br/>audience,<br/>and<br/>engagement.</h2>
-            <p  className='my-10 md:w-3/6 text-neutral-500'>Influencers find opportunities that match their niche, while brands discover the right voices to amplify their message.</p>
-            <div className='w-full mx-auto flex flex-col md:flex-row gap-5 justify-around my-10'>
-                <div className='text-black bg-cyan-50 hover:bg-cyan-100 border-2 border-neutral-900 px-10 py-5 flex flex-col items-center justify-between cursor-pointer'>
-                    <h2 className='text-3xl font-bold my-2 '>Free</h2>
-                    <p className='mt-2 mb-5'>for first 3 promotion</p>
-                    <div className='w-full font-medium text-lg text-red-600 border-t-2 border-neutral-500 py-15'>
-                        <p>no early access</p> 
-                        <p>no analysis report</p> 
-                        <p>no profile customization</p> 
-                    </div>
-                </div>
-                <div className='text-black bg-green-100 hover:bg-green-200 border-2 border-neutral-900 px-10 py-5 flex flex-col items-center justify-between cursor-pointer'>
-                    <h2 className='text-3xl font-bold '>5$ / month</h2>
-                    <p className='mt-2 mb-5'>Premium</p>
-                    <div className='w-full font-medium text-lg text-green-600 border-t-2 border-neutral-500 py-15'>
-                        <p>early access</p> 
-                        <p>Monthly analysis</p> 
-                        <p>cusmotized profile</p> 
-                    </div>
-                </div>
-                <div className='text-black bg-amber-400 hover:bg-amber-500 border-2 border-neutral-900 px-10 py-5 flex flex-col items-center justify-between cursor-pointer'>
-                    <h2 className='text-3xl font-bold my-2 '>15$ / month</h2>
-                    <p className='mt-2 mb-5'>Luxury</p>
-                    <div className='w-full font-medium text-lg text-green-600 border-t-2 border-neutral-500 py-15'>
-                        <p>Free + Premium</p> 
-                        <p>profile review</p> 
-                        <p>Daily </p> 
-                    </div>
-                </div>
-            </div>
+            <p  className='text-neutral-500'>We connect regional Self-Help Groups / startups and regional influencers based on</p>
+            <h2 className='font-bold text-3xl md:text-5xl mb-5 text-white'>niche,<br/>audience,<br/>and<br/>engagement.</h2>
+            <p  className='my-10 md:w-3/6 text-neutral-500'>Influencers find opportunities that match their niche, while Self-Help Groups discover the right voices to amplify their message.</p>
         </div>
         <div className='w-screen h-fit bg-neutral-900 p-10'>
-            <h2 className='font-bold text-5xl md:text-7xl mx-5 text-white'>Find, Connect, Promote</h2>
+            <h2 className='font-bold text-5xl md:text-6xl text-white'>Find, Connect, Promote</h2>
         </div>
     </div>
   )
