@@ -23,14 +23,14 @@ function Hero() {
                 <h2 className='text-violet-600 text-4xl md:text-7xl mb-12 md:mb-0'>to Grow Together</h2>
                 <div className='flex flex-col md:flex-row gap-5 md:gap-7 mt-10 mb-5'>
                     <a href={"/Creator/register"}>        
-                        <button className="hover:bg-violet-600 bg-black shadow-2xl cursor-pointer px-7 py-4 rounded-full transition delay-75 duration-500 ease-in-out">
+                        <button className="hover:bg-violet-600 bg-black shadow-2xl cursor-pointer px-7 py-4 rounded-full transition delay-0 duration-500 ease-in-out">
                             <span className="whitespace-pre-wrap text-center text-md leading-none tracking-tight text-white dark:from-white dark:to-slate-900/10 lg:text-lg">
                             Register as Creator
                             </span>
                         </button>
                     </a>
                     <a href={"/Brand/register"}>        
-                        <button className="hover:bg-violet-600 bg-black shadow-2xl cursor-pointer px-7 py-4 rounded-full transition delay-75 duration-500 ease-in-out">
+                        <button className="hover:bg-violet-600 bg-black shadow-2xl cursor-pointer px-7 py-4 rounded-full transition delay-0 duration-500 ease-in-out">
                             <span className="whitespace-pre-wrap text-center text-md leading-none tracking-tight text-white dark:from-white dark:to-slate-900/10 lg:text-lg">
                             Register as Brand
                             </span>
@@ -41,8 +41,8 @@ function Hero() {
             </div>
         </div>
         <div className='w-screen h-fit bg-violet-50 p-10 py-20'>
-            <h1 className='text-3xl font-bold'>We Focus On Empowering Small-Cap SHGs</h1>
-            <div className='flex flex-wrap md:flex-row gap-5 md:gap-0 items-center justify-around my-10 md:my-5'>
+            <h1 className='text-3xl font-bold mb-16'>We Focus On Empowering Small-Cap SHGs</h1>
+            <div className='flex flex-wrap md:flex-row gap-5 md:gap-16 items-center justify-center my-10 md:my-5'>
                 <Image 
                 src="https://res.cloudinary.com/swayanshu/image/upload/v1738865842/codingaashram/nq6jh3ncfzacy24z5ij6.jpg"
                 width={500}
@@ -83,7 +83,7 @@ function Hero() {
                     <h3 className='text-sm md:text-xl font-medium'>and more.</h3>
                 </div>
             </div>
-            <h3 className='text-lg'>We’re here to connect <span className='font-bold'>SHGs</span> with <span className='font-bold'>influencers</span> who align with their <span className='font-bold'>values, ensuring mutual growth and sustainable success.</span></h3>
+            <h3 className='text-lg mt-16'>We’re here to connect <span className='font-bold'>SHGs</span> with <span className='font-bold'>influencers</span> who align with their <span className='font-bold'>values, ensuring mutual growth and sustainable success.</span></h3>
         </div>
         <div className='w-screen h-fit p-10 bg-neutral-900'>
             <div className='flex items-end justify-center'>
@@ -102,8 +102,8 @@ function Hero() {
         </div>
         <div className='w-screen h-fit bg-neutral-900 p-10 flex flex-col'>
             <p  className='text-neutral-500'>We connect regional Self-Help Groups / startups and regional influencers based on</p>
-            <h2 className='font-bold text-3xl md:text-5xl mb-5 text-white'>niche,<br/>audience,<br/>and<br/>engagement.</h2>
-            <p  className='my-10 md:w-3/6 text-neutral-500'>Influencers find opportunities that match their niche, while Self-Help Groups discover the right voices to amplify their message.</p>
+            <h2 className='font-bold text-3xl md:text-5xl text-white'>niche,<br/>audience,<br/>and<br/>engagement.</h2>
+            <p  className='my-10 text-neutral-500'>Influencers find opportunities that match their niche, while Self-Help Groups discover the right voices to amplify their message.</p>
         </div>
         <div className='w-screen h-fit bg-neutral-900 p-10'>
             <h2 className='font-bold text-5xl md:text-6xl text-white'>Find, Connect, Promote</h2>

@@ -4,14 +4,8 @@ import { useRouter } from 'next/navigation';
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import { cn } from "@/lib/utils";
-import {
-  WalletMultiButton,
-  WalletDisconnectButton
-} from '@solana/wallet-adapter-react-ui';
-import { useWallet } from "@solana/wallet-adapter-react";
 
 function page() {
-  const { publicKey, signMessage } = useWallet();
   const router = useRouter();
   const [data, setData] = useState({
     name: "",
@@ -31,13 +25,6 @@ function page() {
   };
   const handleSubmit = async (e: any) => {
     e.preventDefault();
-    if (!publicKey) {
-      return;
-    }
-    const message = new TextEncoder().encode("Sign into easyPROMO-CREATOR");
-    const signature = await signMessage?.(message);
-    console.log(signature);
-    // console.log(publicKey?.toString());
     try {
       const response = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/creator/signin`,{
         method: "POST",
@@ -46,8 +33,6 @@ function page() {
         },
         body: JSON.stringify({
           ...data,
-          publicKey: publicKey?.toString(),
-          signature,
         })
       });
       if(response.ok){
@@ -68,10 +53,10 @@ function page() {
       }
   };
 return (
-<div className="w-screen h-screen my-20 flex items-center justify-center">
-    <div className="max-w-md w-full mx-auto rounded-none md:rounded-2xl p-4 md:p-8 shadow-input bg-white dark:bg-black">
+<div className="w-screen min-h-screen mt-32 mb-20 flex justify-center">
+    <div className="max-w-md w-full h-fit mx-auto rounded-none md:rounded-2xl p-4 md:p-8 shadow-input bg-white dark:bg-black">
     <h2 className="font-bold text-3xl text-neutral-800 dark:text-neutral-200">
-        Welcome to <span>easyPROMO</span>
+        Welcome to <span>PROMOTIONLINK</span>
     </h2>
     <p className="text-md font-semibold max-w-sm mt-2 text-violet-700">
         Signin As A CREATOR
@@ -86,11 +71,6 @@ return (
             <Label htmlFor="name">Name*</Label>
             <Input name="name" onChange={handleInput} value={data.name} id="name" placeholder="name" type="text" />
         </LabelInputContainer>
-        {/* <div className="w-4/5">
-          {
-            publicKey ? <WalletDisconnectButton /> : <WalletMultiButton />
-          }
-        </div> */}
         </div>
         <LabelInputContainer className="mb-4">
         <Label htmlFor="instagramUrl">Social-Media URL*</Label>
