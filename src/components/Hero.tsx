@@ -9,12 +9,12 @@ function Hero() {
     <div>
         <div className='w-screen h-screen flex flex-col items-center justify-center relative'>
             <Particles
-            className="absolute z-10 w-screen h-screen opacity-40"
+            className="absolute w-screen h-screen opacity-40"
             quantity={500}
             ease={80}
             color={"#000"}
             />
-            <div className='flex flex-col items-center justify-center absolute z-20'>
+            <div className='flex flex-col items-center justify-center absolute'>
                 <h2 className='text-violet-600 text-4xl md:text-7xl'>Empowering</h2>
                 <WordRotate
                 className="my-4 text-4xl md:text-6xl font-bold text-violet-700"
