@@ -7,7 +7,7 @@ import Particles from './magicui/particles'
 function Hero() {
     return (
     <div>
-        <div className='w-screen h-screen flex flex-col items-center justify-center relative'>
+        <div className='w-screen h-screen flex flex-col items-center justify-center relative bg-neutral-50'>
             <Particles
             className="absolute w-screen h-screen opacity-40"
             quantity={500}
@@ -40,7 +40,7 @@ function Hero() {
             <p className='text-center text-lg mt-5 md:w-screen text-neutral-900 px-10'>PromotionLink bridges the gap between <span className='text-violet-500 font-bold'>influencers</span> and <span className='text-violet-500 font-bold'>regional Self-Help Groups / startups</span>. Helping to find their perfect match.</p>
             </div>
         </div>
-        <div className='w-screen h-fit bg-violet-50 p-10 py-20'>
+        <div className='w-screen h-fit bg-neutral-50 p-10 py-20'>
             <h1 className='text-3xl font-bold mb-16'>We Focus On Empowering Small-Cap SHGs</h1>
             <div className='flex flex-wrap md:flex-row gap-5 md:gap-16 items-center justify-center my-10 md:my-5'>
                 <Image 
@@ -85,27 +85,27 @@ function Hero() {
             </div>
             <h3 className='text-lg mt-16'>We’re here to connect <span className='font-bold'>SHGs</span> with <span className='font-bold'>influencers</span> who align with their <span className='font-bold'>values, ensuring mutual growth and sustainable success.</span></h3>
         </div>
-        <div className='w-screen h-fit p-10 bg-neutral-900'>
+        <div className='w-screen h-fit p-10 bg-neutral-950'>
             <div className='flex items-end justify-center'>
-            <h2 className='w-full text-violet-50 text-xl md:text-4xl mb-10 px-10'>The influencer marketing sector in India is projected to reach <span className='font-bold text-violet-400'>₹3,375 crore</span> by 2026, with a compound annual growth rate (CAGR) of<span className='font-bold text-violet-400'> 18%.</span> 
-            <br/><Link className='text-sm bg-neutral-950 px-5 py-2 rounded-full hover:bg-neutral-600 text-white' href={"https://www.ey.com/en_in/insights/media-entertainment/how-influencer-marketing-is-impacting-brands-in-india"}>Read</Link>
+            <h2 className='w-full text-violet-50 text-xl md:text-4xl mt-10 mb-20 px-10'>The influencer marketing sector in India is projected to reach <span className='font-bold text-violet-400'>₹3,375 crore</span> by 2026, with a compound annual growth rate (CAGR) of<span className='font-bold text-violet-400'> 18%.</span> 
+            <br/><Link className='text-xs bg-neutral-200 px-2 py-1 mt-5 rounded-full hover:scale-110 duration-500 ease-in-out hover:text-violet-600 absolute text-neutral-700' href={"https://www.ey.com/en_in/insights/media-entertainment/how-influencer-marketing-is-impacting-brands-in-india"}>Read</Link>
             </h2> 
             </div>
             <hr/>
-            <h2 className='w-full text-violet-50 text-xl md:text-4xl my-10 px-10'>According to a study by Edelman, <span className='font-bold text-violet-400'>63% </span> of consumers trust influencers more than brands when it comes to product recommendations.
-            <br/><Link className='text-sm bg-neutral-950 px-5 py-2 rounded-full hover:bg-neutral-600 text-white' href={"https://www.regionalinfluencers.in/news-article/regional-influencers-outperform-global-influencers-in-driving-engagement-and-sales-says-new-study"}>Read</Link>
+            <h2 className='w-full text-violet-50 text-xl md:text-4xl mt-10 mb-20 px-10'>According to a study by Edelman, <span className='font-bold text-violet-400'>63% </span> of consumers trust influencers more than brands when it comes to product recommendations.
+            <br/><Link className='text-xs bg-neutral-200 px-2 py-1 mt-5 rounded-full hover:scale-110 duration-500 ease-in-out hover:text-violet-600 absolute text-neutral-700' href={"https://www.regionalinfluencers.in/news-article/regional-influencers-outperform-global-influencers-in-driving-engagement-and-sales-says-new-study"}>Read</Link>
             </h2>
             <hr/>
-            <h2 className='w-full text-violet-50 text-xl md:text-4xl my-10 px-10'>The 2025 Union Budget introduces the 'Grameen Credit Score,' enhancing credit access for <span className='font-bold text-violet-400'>100 million</span> rural SHG members.
-            <br/><Link className='text-sm bg-neutral-950 px-5 py-2 rounded-full hover:bg-neutral-600 text-white' href={"https://www.business-standard.com/budget/news/budget-2025-credit-score-boost-for-100-million-rural-shg-members-125020200506_1.html"}>Read</Link>
+            <h2 className='w-full text-violet-50 text-xl md:text-4xl mt-10 mb-20 px-10'>The 2025 Union Budget introduces the 'Grameen Credit Score,' enhancing credit access for <span className='font-bold text-violet-400'>100 million</span> rural SHG members.
+            <br/><Link className='text-xs bg-neutral-200 px-2 py-1 mt-5 rounded-full hover:scale-110 duration-500 ease-in-out hover:text-violet-600 absolute text-neutral-700' href={"https://www.business-standard.com/budget/news/budget-2025-credit-score-boost-for-100-million-rural-shg-members-125020200506_1.html"}>Read</Link>
             </h2>
         </div>
-        <div className='w-screen h-fit bg-neutral-900 p-10 flex flex-col'>
+        <div className='w-screen h-fit bg-neutral-950 p-10 flex flex-col'>
             <p  className='text-neutral-500'>We connect regional Self-Help Groups / startups and regional influencers based on</p>
             <h2 className='font-bold text-3xl md:text-5xl text-white'>niche,<br/>audience,<br/>and<br/>engagement.</h2>
             <p  className='my-10 text-neutral-500'>Influencers find opportunities that match their niche, while Self-Help Groups discover the right voices to amplify their message.</p>
         </div>
-        <div className='w-screen h-fit bg-neutral-900 p-10'>
+        <div className='w-screen h-fit bg-neutral-950 p-10'>
             <h2 className='font-bold text-5xl md:text-6xl text-white'>Find, Connect, Promote</h2>
         </div>
     </div>
