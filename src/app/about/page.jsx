@@ -13,7 +13,7 @@ function page() {
         We combine purpose-driven marketing with digital innovation to ensure every campaign is impactful, meaningful, and community-focused. By working together, we’re not just promoting products—we’re promoting dreams, dignity, and development.
       </h2>
       <h2 className='text-2xl py-4'>
-        Join us in building a future where local brands thrive and real voices make a difference. Let’s grow, uplift, and promote—together.
+        Join us in building a future where local brands thrive and real voices make a difference. Let’s grow, uplift, and promote together.
       </h2>
     </div>
   )
