@@ -13,7 +13,7 @@ function Navbar() {
   }, [])
   
   return (
-    <div className='my-4 mx-10 px-3 md:px-10 py-5 flex items-center justify-between bg-white/30 backdrop-blur-sm rounded-md'>
+    <div className='w-full h-fit px-3 md:px-10 py-5 flex items-center justify-between bg-white/30 backdrop-blur-sm rounded-md top-0 z-10 fixed'>
         <Link href={"/"}>
         <h1 className="text-lg md:text-2xl font-normal text-violet-800 tracking-wide">PROMOTIONLINK</h1>
         </Link>

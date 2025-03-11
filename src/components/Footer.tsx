@@ -42,7 +42,7 @@ function Footer() {
       ];
 
   return (
-    <div className='w-screen'>
+    <div className='w-full bottom-0'>
         <div className='w-full bg-violet-700 flex justify-end px-10'>
           <div className="flex items-center justify-end h-20 w-1/6 ">
             <FloatingDock
