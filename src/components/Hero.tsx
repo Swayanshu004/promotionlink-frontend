@@ -3,6 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import WordRotate from './magicui/word-rotate'
 import Particles from './magicui/particles'
+import { EventEmitterAsyncResource } from 'events'
 
 function Hero() {
     return (
@@ -21,21 +22,40 @@ function Hero() {
                 words={["Creators", "Self-Help Groups"]}
                 />
                 <h2 className='text-violet-600 text-4xl md:text-7xl mb-12 md:mb-0'>to Grow Together</h2>
-                <div className='flex flex-col md:flex-row gap-5 md:gap-7 mt-10 mb-5'>
-                    <a href={"/Creator/register"}>        
-                        <button className="hover:bg-violet-600 bg-black shadow-2xl cursor-pointer px-7 py-4 rounded-full transition delay-0 duration-500 ease-in-out">
-                            <span className="whitespace-pre-wrap text-center text-md leading-none tracking-tight text-white dark:from-white dark:to-slate-900/10 lg:text-lg">
-                            Register as Creator
-                            </span>
-                        </button>
-                    </a>
-                    <a href={"/Brand/register"}>        
-                        <button className="hover:bg-violet-600 bg-black shadow-2xl cursor-pointer px-7 py-4 rounded-full transition delay-0 duration-500 ease-in-out">
-                            <span className="whitespace-pre-wrap text-center text-md leading-none tracking-tight text-white dark:from-white dark:to-slate-900/10 lg:text-lg">
-                            Register as Brand
-                            </span>
-                        </button>
-                    </a>
+                <div>
+                    <div className='flex flex-col md:flex-row justify-between md:gap-7 mt-10 mb-5'>
+                        <a href={"/Creator/register"}>        
+                            <button className="hover:bg-violet-600 bg-black shadow-2xl cursor-pointer px-7 py-4 rounded-full transition delay-0 duration-500 ease-in-out">
+                                <span className="whitespace-pre-wrap text-center text-md leading-none tracking-tight text-white dark:from-white dark:to-slate-900/10 lg:text-lg">
+                                Register as Creator
+                                </span>
+                            </button>
+                        </a>
+                        <a href={"/Brand/register"}>        
+                            <button className="hover:bg-violet-600 bg-black shadow-2xl cursor-pointer px-7 py-4 rounded-full transition delay-0 duration-500 ease-in-out">
+                                <span className="whitespace-pre-wrap text-center text-md leading-none tracking-tight text-white dark:from-white dark:to-slate-900/10 lg:text-lg">
+                                Register as Brand
+                                </span>
+                            </button>
+                        </a>
+                    </div>
+                    <hr />
+                    <div className='flex flex-col md:flex-row justify-between md:gap-7 mt-5 mb-5'>
+                        <a href={"/Creator/login"}>        
+                            <button className="hover:bg-violet-600 bg-black shadow-2xl cursor-pointer px-7 py-4 rounded-full transition delay-0 duration-500 ease-in-out">
+                                <span className="whitespace-pre-wrap text-center text-md leading-none tracking-tight text-white dark:from-white dark:to-slate-900/10 lg:text-lg">
+                                Login as Creator
+                                </span>
+                            </button>
+                        </a>
+                        <a href={"/Brand/login"}>        
+                            <button className="hover:bg-violet-600 bg-black shadow-2xl cursor-pointer px-7 py-4 rounded-full transition delay-0 duration-500 ease-in-out">
+                                <span className="whitespace-pre-wrap text-center text-md leading-none tracking-tight text-white dark:from-white dark:to-slate-900/10 lg:text-lg">
+                                Login as Brand
+                                </span>
+                            </button>
+                        </a>
+                    </div>
                 </div>
             <p className='text-center text-lg mt-5 md:w-screen text-neutral-900 px-10'>PromotionLink bridges the gap between <span className='text-violet-500 font-bold'>influencers</span> and <span className='text-violet-500 font-bold'>regional Self-Help Groups / startups</span>. Helping to find their perfect match.</p>
             </div>

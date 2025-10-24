@@ -47,11 +47,11 @@ function page() {
               <div className='w-fit mt-5 lg:mt-0 flex flex-col items-start gap-5 h-full lg:flex-row'>
                 <div className='w-full lg:w-fit h-full p-5 bg-gray-600 text-md text-neutral-300 font-semibold rounded-xl'>Pending Amount : 
                 <br />
-                <span className='text-white text-4xl'>{apidata1.pendingAmount} SOL</span>
+                <span className='text-white text-4xl'>{apidata1.pendingAmount ? apidata1.pendingAmount : 0} ₹</span>
                 </div>
                 <div className='w-full lg:w-fit h-full p-5 bg-gray-600 text-md text-neutral-300 font-semibold rounded-xl'>Balance : 
                 <br />
-                <span className='text-white text-4xl'>{apidata1.balance} SOL</span>
+                <span className='text-white text-4xl'>{apidata1.balance ? apidata1.balance : 0} ₹</span>
                 <br />
                 </div>
               </div>

@@ -3,12 +3,14 @@ import React, { useState } from "react";
 import { useRouter } from 'next/navigation';
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
+import axios from "axios";
 import { cn } from "@/lib/utils";
 
 function page() {
   const router = useRouter();
   const [data, setData] = useState({
     name: "",
+    email:"xyz@gmail.com",
     instagramUrl: "",
     youtubeUrl: "",
     phoneNo: "",
@@ -26,31 +28,32 @@ function page() {
   const handleSubmit = async (e: any) => {
     e.preventDefault();
     try {
-      const response = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/creator/signin`,{
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          ...data,
-        })
-      });
-      if(response.ok){
-        setData({
+      axios.post(`${process.env.NEXT_PUBLIC_BACKEND_URL}/creator/signin`, data)
+      .then(async function (response) {
+        console.log(response);
+        if(response.status === 201){
+          setData({
             name: "",
+            email:"xyz@gmail.com",
             instagramUrl: "",
             youtubeUrl: "",
             phoneNo: "",
             category: "",
             password: "",
           })
-          const data = await response.json();
-          localStorage.setItem('jwtToken',data.token);
-          router.push("/Creator/profile");
+          console.log(response.data.token);
+          localStorage.setItem('jwtToken',response.data.token);
         }
-      } catch (error) {
-        console.error("Some Error In Fetch",error);
-      }
+      }) 
+      .catch(function (error) {
+        console.log(error);
+      });
+    }
+    catch(error){
+      console.log(error);
+      
+    }
+      // ------------------------------------
   };
 return (
 <div className="w-screen min-h-screen mt-32 mb-20 flex justify-center">
@@ -74,11 +77,11 @@ return (
         </div>
         <LabelInputContainer className="mb-4">
         <Label htmlFor="instagramUrl">Social-Media URL*</Label>
-        <Input name="instagramUrl" onChange={handleInput} value={data.instagramUrl} id="instagramUrl" placeholder="example-ig.com" type="url" />
+        <Input name="instagramUrl" onChange={handleInput} value={data.instagramUrl} id="instagramUrl" placeholder="example-ig.com" type="text" />
         </LabelInputContainer>
         <LabelInputContainer className="mb-4">
         <Label htmlFor="youtubeUrl">Social-Media URL</Label>
-        <Input name="youtubeUrl" onChange={handleInput} value={data.youtubeUrl} id="youtubeUrl" placeholder="example-yt.com" type="url" />
+        <Input name="youtubeUrl" onChange={handleInput} value={data.youtubeUrl} id="youtubeUrl" placeholder="example-yt.com" type="text" />
         </LabelInputContainer>
 
         <LabelInputContainer className="mb-4">

@@ -20,7 +20,7 @@ function page() {
   },[])
   // console.log(" - - ",apidata)
   return (
-    <div className='w-screen my-20'>
+    <div className='w-screen min-h-screen my-20'>
         <div className='w-full flex justify-center flex-wrap gap-3 lg:my-10'>
         {apidata.map(blogContent => (
           <CardCreator key={blogContent._id} blogContent={blogContent}/>
